@@ -26,7 +26,7 @@ char	*ft_get_last(char *arch1r)
 	}
 	while (arch1r[s_to_n] != '\n' && arch1r[s_to_n] != 0)
 		s_to_n++;
-	aux = ft_substr(arch1r, s_to_n + 1, ft_strlen(arch1r) - s_to_n);
+	aux = ft_substr_Gnl(arch1r, s_to_n + 1, ft_strlen_Gnl(arch1r) - s_to_n);
 	free(arch1r);
 	arch1r = aux;
 	return (arch1r);
@@ -46,7 +46,7 @@ char	*ft_get_line_ready(char *arch1r)
 	}
 	while (arch1r[i] != '\n' && arch1r[i] != 0)
 		i++;
-	aux = ft_substr(arch1r, 0, i + 1);
+	aux = ft_substr_Gnl(arch1r, 0, i + 1);
 	if (!aux)
 	{
 		free(aux);
@@ -73,10 +73,10 @@ char	*ft_read_line(int fd, char *arch1r)
 		if (lectura == 0)
 			break ;
 		archaux[lectura] = 0;
-		arch1r = ft_strjoin(arch1r, archaux);
+		arch1r = ft_strjoin_Gnl(arch1r, archaux);
 		if (!arch1r)
 			return (0);
-		if (ft_strchr(arch1r, '\n'))
+		if (ft_strchr_Gnl(arch1r, '\n'))
 			break ;
 	}
 	return (arch1r);
@@ -101,7 +101,7 @@ char	*get_next_line(int fd)
 	arch1r = ft_get_last(arch1r);
 	return (finaline);
 }
-
+/*
 int	main(void)
 {
 	int		fd;
@@ -120,3 +120,4 @@ int	main(void)
 	printf("BUFFER_SIZE = %d\n", BUFFER_SIZE);
 	return (0);
 }
+*/
