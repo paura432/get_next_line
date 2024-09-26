@@ -10,6 +10,11 @@
 
 ## Function Prototype
 
+
+```c
+char *get_next_line(int fd);
+```
+
 ## Parameters
 
 **get_next_line** is a function used to read a line from a file descriptor, typically for handling input from files or standard input. It reads up to the newline character or the end of the file and returns the line as a string. This function is commonly utilized in C programming for efficiently reading lines of text.
